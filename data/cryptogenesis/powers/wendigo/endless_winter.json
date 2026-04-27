@@ -1,0 +1,21 @@
+{
+    "type": "apoli:multiple",
+    "name": "Endless Winter",
+    "description": "The endless winter follows your hollow spirit, freezing the surrounding area and weakening nearby lifeforms. You may focus entirely on the storm, causing it to rapidly pick up in intensity.",
+    
+    "weak_winter": {
+        "type": "apoli:action_over_time",
+        "condition": {
+            "type": "origins:sneaking",
+            "inverted": true
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:area_of_effect"
+                }
+            ]
+        }
+    }
+}

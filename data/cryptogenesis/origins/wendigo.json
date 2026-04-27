@@ -1,0 +1,9 @@
+{
+    "name": "Wendigo",
+    "description": "A hollow spirit of the endless winter, it now roams the forest in an eternal search for fresh meat.",
+    "impact": 3,
+
+    "powers": [
+        "cryptogenesis:wendigo/endless_winter"
+    ]
+}
