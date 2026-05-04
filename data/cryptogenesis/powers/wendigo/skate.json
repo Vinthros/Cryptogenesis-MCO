@@ -1,0 +1,10 @@
+{
+    "name": "Skate",
+    "description": "The soles of your feet are naturally adapted for minimal friction on all surfaces, causing you to slide regardless of the block you're standng on, but also gain faster mobility on ice.",
+    "type": "apoli:multiple",
+
+    "slippery": {
+        "type": "origins:modify_slipperiness",
+        "modifier": {}
+    }
+}
