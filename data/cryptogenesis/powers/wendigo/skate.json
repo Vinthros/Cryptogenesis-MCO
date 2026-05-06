@@ -5,6 +5,31 @@
 
     "slippery": {
         "type": "origins:modify_slipperiness",
-        "modifier": {}
+        "modifier": {
+            "operation": "origins:set_total",
+            "value": 1
+        }
+    },
+
+    "ice_speed": {
+        "type": "origins:action_over_time",
+        "condition": {
+            "type": "origins:on_block",
+            "block_condition": {
+                "type": "origins:in_tag",
+                "tag": "minecraft:ice"
+            }
+        },
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+                {
+                    "effect": "minecraft:speed",
+                    "amplifier": 0,
+                    "duration": 5
+                }
+            ]
+        }
     }
 }

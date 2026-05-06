@@ -4,6 +4,7 @@
     "impact": 3,
 
     "powers": [
-        "cryptogenesis:wendigo/endless_winter"
+        "cryptogenesis:wendigo/endless_winter",
+        "cryptogenesis:wendigo/skate"
     ]
 }
