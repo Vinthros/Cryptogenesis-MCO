@@ -1,0 +1,14 @@
+{
+    "name": "Hyperflammable",
+    "description": "When set on fire, you burn forever.",
+    
+    "type": "origins:action_over_time",
+    "condition": {
+        "type": "origins:on_fire"
+    },
+    "entity_action": {
+        "type": "origins:ignite",
+        "duration": 2
+    },
+    "interval": 20
+}
