@@ -22,14 +22,18 @@
                             "type": "origins:apply_effect",
                             "effects": [
                                 {
-                                    "effect": "minecraft:slowness",
+                                    "id": "minecraft:slowness",
                                     "amplifier": 0,
-                                    "duration": 5
+                                    "duration": 10,
+                                    "show_particles": false,
+                                    "show_icon": true
                                 },
                                 {
-                                    "effect": "minecraft:weakness",
+                                    "id": "minecraft:weakness",
                                     "amplifier": 0,
-                                    "duration": 5
+                                    "duration": 10,
+                                    "show_particles": false,
+                                    "show_icon": true
                                 }
                             ]
                         }
@@ -43,15 +47,28 @@
                         "shape": "sphere",
                         "block_condition": {
                             "type": "origins:chance",
-                            "chance": 0.05
+                            "chance": 0.01
                         },
                         "block_action": {
                             "type": "origins:if_else_list",
                             "actions": [
                                 {
                                     "condition": {
-                                        "type": "origins:block",
-                                        "block": "minecraft:water"
+                                        "type": "origins:and",
+                                        "conditions": [
+                                            {
+                                                "type": "origins:block",
+                                                "block": "minecraft:water"
+                                            },
+                                            {
+                                                "type": "origins:offset",
+                                                "condition": {
+                                                    "type": "origins:block",
+                                                    "block": "minecraft:air"
+                                                },
+                                                "y": 1
+                                            }
+                                        ]
                                     },
                                     "action": {
                                         "type": "origins:set_block",
@@ -63,10 +80,19 @@
                                         "type": "origins:and",
                                         "conditions": [
                                             {
-                                                "type": "origins:exposed_to_sky"
+                                                "type": "origins:offset",
+                                                "condition": {
+                                                    "type": "origins:replaceable"
+                                                },
+                                                "y": 1
                                             },
                                             {
                                                 "type": "origins:movement_blocking"
+                                            },
+                                            {
+                                                "type": "origins:in_tag",
+                                                "tag": "minecraft:ice",
+                                                "inverted": true
                                             }
                                         ]
                                     },
@@ -74,7 +100,7 @@
                                         "type": "origins:offset",
                                         "action": {
                                             "type": "origins:set_block",
-                                            "block": "minecraft:snow_layer"
+                                            "block": "minecraft:snow"
                                         },
                                         "y": 1
                                     }
@@ -103,19 +129,23 @@
                         "type": "target_action",
                         "action": {
                             "type": "origins:and",
-                            "actions:": [
+                            "actions": [
                                 {
                                     "type": "origins:apply_effect",
                                     "effects": [
                                         {
-                                            "effect": "minecraft:slowness",
+                                            "id": "minecraft:slowness",
                                             "amplifier": 2,
-                                            "duration": 5
+                                            "duration": 5,
+                                            "show_icon": true,
+                                            "show_particles": false
                                         },
                                         {
-                                            "effect": "minecraft:weakness",
+                                            "id": "minecraft:weakness",
                                             "amplifier": 1,
-                                            "duration": 5
+                                            "duration": 5,
+                                            "show_icon": true,
+                                            "show_particles": false
                                         }
                                     ]
                                 },
@@ -134,15 +164,28 @@
                         "shape": "sphere",
                         "block_condition": {
                             "type": "origins:chance",
-                            "chance": 0.1
+                            "chance": 0.025
                         },
                         "block_action": {
                             "type": "origins:if_else_list",
                             "actions": [
                                 {
                                     "condition": {
-                                        "type": "origins:block",
-                                        "block": "minecraft:water"
+                                        "type": "origins:and",
+                                        "conditions": [
+                                            {
+                                                "type": "origins:block",
+                                                "block": "minecraft:water"
+                                            },
+                                            {
+                                                "type": "origins:offset",
+                                                "condition": {
+                                                    "type": "origins:block",
+                                                    "block": "minecraft:air"
+                                                },
+                                                "y": 1
+                                            }
+                                        ]
                                     },
                                     "action": {
                                         "type": "origins:set_block",
@@ -174,10 +217,19 @@
                                         "type": "origins:and",
                                         "conditions": [
                                             {
-                                                "type": "origins:exposed_to_sky"
+                                                "type": "origins:offset",
+                                                "condition": {
+                                                    "type": "origins:replaceable"
+                                                },
+                                                "y": 1
                                             },
                                             {
                                                 "type": "origins:movement_blocking"
+                                            },
+                                            {
+                                                "type": "origins:in_tag",
+                                                "tag": "minecraft:ice",
+                                                "inverted": true
                                             }
                                         ]
                                     },
@@ -185,7 +237,7 @@
                                         "type": "origins:offset",
                                         "action": {
                                             "type": "origins:set_block",
-                                            "block": "minecraft:snow_layer"
+                                            "block": "minecraft:snow"
                                         },
                                         "y": 1
                                     }

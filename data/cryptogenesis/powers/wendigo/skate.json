@@ -6,8 +6,8 @@
     "slippery": {
         "type": "origins:modify_slipperiness",
         "modifier": {
-            "operation": "origins:set_total",
-            "value": 1
+            "operation": "apoli:set_total",
+            "amount": 1
         }
     },
 
@@ -25,9 +25,11 @@
             "type": "origins:apply_effect",
             "effects": [
                 {
-                    "effect": "minecraft:speed",
-                    "amplifier": 0,
-                    "duration": 5
+                    "id": "minecraft:speed",
+                    "amplifier": 3,
+                    "duration": 10,
+                    "show_icon": false,
+                    "show_particles": true
                 }
             ]
         }

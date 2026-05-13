@@ -6,6 +6,7 @@
     "powers": [
         "cryptogenesis:wendigo/endless_winter",
         "cryptogenesis:wendigo/skate",
+        "origins:no_shield",
         "cryptogenesis:general/hyperflammable"
     ]
 }
