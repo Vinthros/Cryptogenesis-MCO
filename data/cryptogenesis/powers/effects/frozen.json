@@ -1,0 +1,43 @@
+{
+    "name": "Frozen",
+    "type": "apoli:multiple",
+    "hidden": true,
+
+    "freeze_stacks": {
+        "type": "apoli:resource",
+        "min": 0,
+        "max": 100,
+        "hud_render": {
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 9
+        },
+        "min_action": {
+            "type": "origins:revoke_power",
+            "power": "*:*",
+            "source": "*:freeze"
+        }
+    },
+
+    "callback": {
+        "type": "origins:action_on_callback",
+        "entity_action_gained": {
+            "type": "origins:change_resource",
+            "resource": "*:*_freeze_stacks",
+            "change": 10,
+            "operation": "set"
+        }
+    },
+
+    "slowness": {
+        "type": "origins:modify_attribute",
+        "attribute": "minecraft:generic.movement_speed",
+        "modifier": {
+            "operation":"apoli:multiply_total_multiplicative",
+            "resource": "*:*_freeze_stacks",
+            "modifier": {
+                "operation": "apoli:multiply_total_multiplicative",
+                "amount": -2
+            }
+        }
+    }
+}
