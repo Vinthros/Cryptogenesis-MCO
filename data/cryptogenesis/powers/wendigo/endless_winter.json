@@ -148,9 +148,6 @@
                                             "show_particles": false
                                         }
                                     ]
-                                },
-                                {
-                                    "type": "origins:extinguish"
                                 }
                             ]
                         }
